@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Menu</title>
+</head>
+
+<body>
+  <div class="xl:container mx-auto">
+    <h2 class="text-white font-bold text-[30px] text-center mb-[44px] pt-[20px]">Menu</h2>
+    <form id="form" class="flex pl-[22px] gap-x-[94px]">
+      <div class="grid grid-row-2 grid-cols-3 gap-x-[24px] gap-y-[32px]">
+        <input type="text" id="name" class="input-box" placeholder="Taom nomi" required minlength="3" autofocus autocomplete="off">
+        <input type="number" id="price" class="input-box" placeholder="Taom narxi" required autocomplete="off">
+        <input type="url" id="img-url" class="input-box" placeholder="Taom rasmi linki" required minlength="3" pattern="(https?:\/\/.*\.(?:png|jpg|jpeg))">
+        <input type="text" id="chef" class="input-box" placeholder="Taom oshpazi" required minlength="3" autocomplete="off">
+        <input type="text" id="restaurant" class="input-box max-w-full col-span-2" placeholder="Taom tayyorlangan restoran" required minlength="3" autocomplete="off">
+      </div>
+      <div class="grid items-center">
+        <button type="submit" class="px-[34px] py-[10px] bg-[#1DE655] text-lg text-white hover:bg-[#2bc757]">Add</button>
+      </div>
+    </form>
+    <div id="order-wrapper" class="mt-[47px] flex flex-col gap-y-[57px]"></div>
+  <div id="modal" class="hidden w-screen h-screen fixed bg-[#5d525251] place-items-center inset-0">
+      <div class="flex flex-col w-2/6 gap-y-[12px] px-[15px] py-[20px] rounded-[10px] bg-white relative">
+        <div class="exit"></div>
+        <h3 class="text-[38px] font-semibold">Ogohlantirish!</h3>
+        <p class="text-[22px]">Rostdan ham bu toamni o'chirib yubormoqchimisiz?</p>
+        <div class="self-end">
+          <button class="btn-reject">Yo'q</button>
+          <button class="btn-accept">O'chir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
